@@ -23,8 +23,8 @@ def buscar_pokemon(request):
         
         mensaje="articulo buscado: %r" %request.GET["pokemon"]
         pokemon_buscado=request.GET["pokemon"]
-        pokemon_Base_Datos=pokemon.objects.filter(nombre__icontains=pokemon_buscado)
-        return render(request, "proyecto_final_app/resultado_busqueda.html", {"pokemon buscado":pokemon_buscado,"pokemon en la base de datos":pokemon_Base_Datos})
+        pokemon_Base_Datos=pokemon.objects.filter(Nombre_pokemon__icontains=pokemon_buscado)
+        return render(request, "proyecto_final_app/resultado_busqueda.html", {"pokemon_buscado":pokemon_buscado,"pokemon_en_la_base_de_datos":pokemon_Base_Datos})
     else:
         
         mensaje="por favor introduce un pokemon a buscar"
