@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Estas buscando: <strong>{{"pokemon buscado"}}</strong></p>
+{%if pokemon_buscado %}
+    <p>articulo encontrados:{{length("pokemon en la base de datos")}} articulos</p>
+<ul>
+    {%for busqueda in pokemon en la base de datos%}
+    <li>
+        {{busqueda.nombre}}
+
+    </li>
+
+
+</ul>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
